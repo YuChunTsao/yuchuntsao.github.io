@@ -1,0 +1,21 @@
+name: Create Static Site
+on:
+  push:
+      branches:
+        - master
+jobs:
+  Build-Next-App:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install and export
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install --legacy-peer-deps
+      - run: npm run export
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.BLOG_DEPLOY_TOKEN }}
+          publish_dir: ./out/

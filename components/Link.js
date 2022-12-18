@@ -2,8 +2,17 @@
 import Link from 'next/link'
 
 const CustomLink = ({ href, ...rest }) => {
+  const isStaticFileLink = href && href.startsWith('/static')
   const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
+
+  if (isStaticFileLink) {
+    return (
+      <Link href={href}>
+        <a target="_blank" {...rest} />
+      </Link>
+    )
+  }
 
   if (isInternalLink) {
     return (

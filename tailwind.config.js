@@ -95,9 +95,11 @@ module.exports = {
             },
             strong: { color: theme('colors.gray.600') },
             blockquote: {
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.500'),
               borderLeftColor: theme('colors.gray.200'),
             },
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:first-of-type::after': { content: 'none' },
           },
         },
         dark: {
@@ -156,9 +158,11 @@ module.exports = {
               },
             },
             blockquote: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.400'),
               borderLeftColor: theme('colors.gray.700'),
             },
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:first-of-type::after': { content: 'none' },
           },
         },
       }),

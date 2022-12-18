@@ -53,6 +53,15 @@ const securityHeaders = [
 ]
 
 module.exports = withBundleAnalyzer({
+  images: {
+    loader: 'imgix',
+    path: '/',
+  },
+  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+    return {
+      '/': { page: '/' },
+    }
+  },
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
