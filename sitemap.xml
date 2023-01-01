@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yuchuntsao.github.io//about</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io/</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//projects</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//tags</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2022/convert-csv-to-geojson-using-gdal</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2022/how-to-setup-postgis-with-docker</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2023/how-to-install-osm2pgsql-on-ubuntu-18-04</loc>
+  </url>
+</urlset>
