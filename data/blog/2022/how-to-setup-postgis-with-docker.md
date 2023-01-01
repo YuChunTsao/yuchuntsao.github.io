@@ -119,6 +119,12 @@ Run this container is background with docker-compose.
 docker-compose up -d
 ```
 
+Connect to database
+
+```bash
+docker-compose exec postgis psql -U postgres
+```
+
 > `docker-compose stop` -> Stop services  
 > `docker-compose down` -> Stop and remove containers, networks, volumes and images created by `up`.
 
