@@ -31,4 +31,8 @@
   <url>
     <loc>https://yuchuntsao.github.io//blog/2023/how-to-install-osm2pgsql-on-ubuntu-18-04</loc>
   </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2023/import-osm-data-into-postgis-with-osm2pgsql</loc>
+  </url>
 </urlset>
