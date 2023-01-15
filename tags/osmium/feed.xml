@@ -8,7 +8,7 @@
       <managingEditor>tsao84672776@gmail.com (YuChun Tsao)</managingEditor>
       <webMaster>tsao84672776@gmail.com (YuChun Tsao)</webMaster>
       <lastBuildDate>Sun, 15 Jan 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://yuchuntsao.github.io//tags/openstreetmap/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://yuchuntsao.github.io//tags/osmium/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
     <guid>https://yuchuntsao.github.io//blog/2023/extract-osm-data-with-osmium</guid>
@@ -18,16 +18,6 @@
     <pubDate>Sun, 15 Jan 2023 00:00:00 GMT</pubDate>
     <author>tsao84672776@gmail.com (YuChun Tsao)</author>
     <category>Osmium</category><category>OpenStreetMap</category>
-  </item>
-
-  <item>
-    <guid>https://yuchuntsao.github.io//blog/2023/import-osm-data-into-postgis-with-osm2pgsql</guid>
-    <title>Import OSM data into PostGIS with osm2pgsql</title>
-    <link>https://yuchuntsao.github.io//blog/2023/import-osm-data-into-postgis-with-osm2pgsql</link>
-    null
-    <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
-    <author>tsao84672776@gmail.com (YuChun Tsao)</author>
-    <category>osm2pgsql</category><category>OpenStreetMap</category><category>PostGIS</category>
   </item>
 
     </channel>
