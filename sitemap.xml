@@ -39,4 +39,8 @@
   <url>
     <loc>https://yuchuntsao.github.io//blog/2023/import-osm-data-into-postgis-with-osm2pgsql</loc>
   </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2023/linux-backup-with-duplicity</loc>
+  </url>
 </urlset>

@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>tsao84672776@gmail.com (YuChun Tsao)</managingEditor>
       <webMaster>tsao84672776@gmail.com (YuChun Tsao)</webMaster>
-      <lastBuildDate>Sun, 15 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sun, 22 Jan 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://yuchuntsao.github.io//feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://yuchuntsao.github.io//blog/2023/linux-backup-with-duplicity</guid>
+    <title>Linux backup with Duplicity</title>
+    <link>https://yuchuntsao.github.io//blog/2023/linux-backup-with-duplicity</link>
+    null
+    <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
+    <author>tsao84672776@gmail.com (YuChun Tsao)</author>
+    <category>Linux</category><category>Backup</category><category>Duplicity</category>
+  </item>
+
   <item>
     <guid>https://yuchuntsao.github.io//blog/2023/extract-osm-data-with-osmium</guid>
     <title>Extract OSM data with Osmium</title>
