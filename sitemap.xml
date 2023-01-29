@@ -21,15 +21,13 @@
   </url>
 
   <url>
-    <loc>https://yuchuntsao.github.io//blog/2022/convert-csv-to-geojson-using-gdal</loc>
-  </url>
-
-  <url>
-    <loc>https://yuchuntsao.github.io//blog/2022/how-to-setup-postgis-with-docker</loc>
-  </url>
-
-  <url>
     <loc>https://yuchuntsao.github.io//blog/2023/extract-osm-data-with-osmium</loc>
+  </url>
+
+  <url>
+    <loc
+      >https://yuchuntsao.github.io//blog/2023/how-to-install-and-setup-postgis-on-ubuntu-22-04</loc
+    >
   </url>
 
   <url>
@@ -42,5 +40,13 @@
 
   <url>
     <loc>https://yuchuntsao.github.io//blog/2023/linux-backup-with-duplicity</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2022/convert-csv-to-geojson-using-gdal</loc>
+  </url>
+
+  <url>
+    <loc>https://yuchuntsao.github.io//blog/2022/how-to-setup-postgis-with-docker</loc>
   </url>
 </urlset>
