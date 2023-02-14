@@ -99,11 +99,11 @@ tippecanoe \
   -l "highways"
 ```
 
----
+## Using your vector tiles in QGIS
 
-## Using your vector tiles
+Since `PMTiles` connot be used directly in QGIS at this time, this part is only for `MBTiles` and `Directory`, but you can use `PMTiles` through Leaflet or Maplibre GL JS.
 
-### Host MBTiles
+### MBTiles
 
 If you output vector tiles as `MBTiles`, you can use `tileserver-gl-light` to host your `MBTiles`.
 
@@ -116,9 +116,9 @@ The ZXY URL is [`http://localhost:8080/data/motorway/{z}/{x}/{y}.pbf`](http://lo
 > You can install `tileserver-gl-light` with `npm install -g tileserver-gl-light`.  
 > If you want to change more behavior about `tileserver-gl-light`, you can follow [TileServer GL documentation](https://tileserver.readthedocs.io/en/latest/) . The documentation has example about configuration file.
 
-### Host directory or PMTiles
+### Directory
 
-If you output vector tiles to `directory` or `PMTiles`, you can use `http-server` or other HTTP server to host it.
+If you output vector tiles to `directory`, you can use `http-server` or other HTTP server to host it.
 
 ```bash
 # Output directory
@@ -126,13 +126,6 @@ http-server --port 8081 ./motorway_tiles
 ```
 
 The URL is [`http://localhost:8081/{z}/{x}/{y}.pbf`](http://localhost:8081/{z}/{x}/{y}.pbf)
-
-```bash
-# PMTiles in current directory
-http-server --port 8082 .
-```
-
-The URL is [`http://localhost:8082/{z}/{x}/{y}.pbf`](http://localhost:8082/{z}/{x}/{y}.pbf)
 
 ### Open your vector tiles in QGIS
 
