@@ -5,9 +5,11 @@ import Image from './Image'
 import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
+import MaplibreGL from './Map/MaplibreGL'
 import { BlogNewsletterForm } from './NewsletterForm'
 
 export const MDXComponents = {
+  MaplibreGL,
   Image,
   TOCInline,
   a: CustomLink,
