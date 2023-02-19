@@ -8,7 +8,7 @@
       <managingEditor>tsao84672776@gmail.com (YuChun Tsao)</managingEditor>
       <webMaster>tsao84672776@gmail.com (YuChun Tsao)</webMaster>
       <lastBuildDate>Sun, 19 Feb 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://yuchuntsao.github.io//tags/vector-tiles/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://yuchuntsao.github.io//tags/pmtiles/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
     <guid>https://yuchuntsao.github.io//blog/2023/using-pmtiles-in-maplibre-gl-js</guid>
@@ -18,16 +18,6 @@
     <pubDate>Sun, 19 Feb 2023 00:00:00 GMT</pubDate>
     <author>tsao84672776@gmail.com (YuChun Tsao)</author>
     <category>PMTiles</category><category>Vector Tiles</category><category>Maplibre GL JS</category>
-  </item>
-
-  <item>
-    <guid>https://yuchuntsao.github.io//blog/2023/create-vector-tiles-with-tippecanoe</guid>
-    <title>Create vector tiles with tippecanoe</title>
-    <link>https://yuchuntsao.github.io//blog/2023/create-vector-tiles-with-tippecanoe</link>
-    null
-    <pubDate>Sun, 12 Feb 2023 00:00:00 GMT</pubDate>
-    <author>tsao84672776@gmail.com (YuChun Tsao)</author>
-    <category>OpenStreetMap</category><category>Vector Tiles</category><category>Tippecanoe</category>
   </item>
 
     </channel>
