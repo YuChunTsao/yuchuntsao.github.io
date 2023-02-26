@@ -24,9 +24,14 @@ const MaplibreGL = (props) => {
       var map
       p.getHeader().then((h) => {
         map = new maplibregl.Map({
+          minZoom: h.minZoom - 1,
+          maxZoom: h.maxZoom - 1,
+          zoom: h.centerZoom - 1,
+          maxBounds: [
+            [h.minLon, h.minLat],
+            [h.maxLon, h.maxLat],
+          ],
           center: [h.centerLon, h.centerLat],
-          zoom: h.maxZoom,
-          minZoom: h.minZoom,
           container: mapContainerRef.current,
           style: style,
         })
