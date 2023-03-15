@@ -101,8 +101,6 @@ tippecanoe \
 
 ## Using your vector tiles in QGIS
 
-Since `PMTiles` connot be used directly in QGIS at this time, this part is only for `MBTiles` and `Directory`, but you can use `PMTiles` through Leaflet or Maplibre GL JS.
-
 ### MBTiles
 
 If you output vector tiles as `MBTiles`, you can use `tileserver-gl-light` to host your `MBTiles`.
@@ -116,20 +114,32 @@ The ZXY URL is [`http://localhost:8080/data/motorway/{z}/{x}/{y}.pbf`](http://lo
 > You can install `tileserver-gl-light` with `npm install -g tileserver-gl-light`.  
 > If you want to change more behavior about `tileserver-gl-light`, you can follow [TileServer GL documentation](https://tileserver.readthedocs.io/en/latest/) . The documentation has example about configuration file.
 
+### PMTiles
+
+If you output vector tiles as `PMTiles`, you can use `go-pmtiles` to serve your directory of archives.
+
+```bash
+pmtiles serve ./data --port=8081
+```
+
+The URL is [`http://localhost:8081/motorway/{z}/{x}/{y}.mvt`](http://localhost:8081/motorway/{z}/{x}/{y}.mvt)
+
+> You can download `go-pmtiles` from [`releases page`](https://github.com/protomaps/go-pmtiles/releases).
+
 ### Directory
 
 If you output vector tiles to `directory`, you can use `http-server` or other HTTP server to host it.
 
 ```bash
 # Output directory
-http-server --port 8081 ./motorway_tiles
+http-server --port 8082 ./motorway_tiles
 ```
 
-The URL is [`http://localhost:8081/{z}/{x}/{y}.pbf`](http://localhost:8081/{z}/{x}/{y}.pbf)
+The URL is [`http://localhost:8082/{z}/{x}/{y}.pbf`](http://localhost:8082/{z}/{x}/{y}.pbf)
 
 ### Open your vector tiles in QGIS
 
-Set the URL in QGIS to access your pbf file.
+Set the URL in QGIS to access your tiles.
 
 ![Vector Tiles Connection](/static/images/2023/create-vector-tiles-with-tippecanoe/vector_tiles_connection.png)
 
@@ -146,3 +156,4 @@ Add this layer into map.
 - [FlatGeobuf](https://flatgeobuf.org/)
 - [OpenStreetMap - Key:highway](https://wiki.openstreetmap.org/wiki/Key:highway)
 - [TileServer GL documentation](https://tileserver.readthedocs.io/en/latest/)
+- [go-pmtiles](https://github.com/protomaps/go-pmtiles)
