@@ -1,7 +1,7 @@
 ---
 title: Get tile index from a polygon?
 date: '2024-10-13'
-tags: ['']
+tags: []
 draft: true
 ---
 

@@ -1,0 +1,30 @@
+---
+import PostList from '../../components/PostList.astro'
+import { SITE_TITLE } from '../../consts'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getPosts, getTags, tagSlug } from '../../lib/posts'
+
+export async function getStaticPaths() {
+  const posts = await getPosts()
+  return (await getTags()).map(([tag]) => ({
+    params: { tag },
+    props: { posts: posts.filter((post) => post.data.tags.map(tagSlug).includes(tag)) },
+  }))
+}
+
+const { tag } = Astro.params
+const { posts } = Astro.props
+// Same title as the old site: the slug with its first letter capitalized.
+const title = tag[0].toUpperCase() + tag.slice(1)
+---
+
+<BaseLayout title={`${tag} - ${SITE_TITLE}`}>
+  <div class="divide-y divide-neutral-200 dark:divide-neutral-700">
+    <div class="space-y-2 pt-6 pb-8 md:space-y-5">
+      <h1 class="text-3xl leading-9 font-extrabold tracking-tight text-neutral-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-neutral-100">
+        {title}
+      </h1>
+    </div>
+    <PostList posts={posts} />
+  </div>
+</BaseLayout>

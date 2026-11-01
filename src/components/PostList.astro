@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import FormattedDate from './FormattedDate.astro'
+import Tag from './Tag.astro'
+
+interface Props {
+  posts: CollectionEntry<'posts'>[]
+}
+
+const { posts } = Astro.props
+---
+
+<ul class="divide-y divide-neutral-200 dark:divide-neutral-700">
+  {posts.length === 0 && <li class="py-12">還沒有文章。</li>}
+  {posts.map((post) => (
+    <li class="py-12">
+      <article class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+        <dl>
+          <dt class="sr-only">發佈於</dt>
+          <dd class="text-base leading-6 font-medium text-neutral-500 dark:text-neutral-400">
+            <FormattedDate date={post.data.date} />
+          </dd>
+        </dl>
+        <div class="space-y-3 xl:col-span-3">
+          <h2 class="text-2xl leading-8 font-bold tracking-tight">
+            <a href={`/posts/${post.id}/`} class="text-neutral-900 dark:text-neutral-100">
+              {post.data.title}
+            </a>
+          </h2>
+          {post.data.tags.length > 0 && (
+            <div class="flex flex-wrap">
+              {post.data.tags.map((tag) => (
+                <Tag text={tag} />
+              ))}
+            </div>
+          )}
+          {post.data.description && (
+            <p class="text-neutral-500 dark:text-neutral-400">{post.data.description}</p>
+          )}
+        </div>
+      </article>
+    </li>
+  ))}
+</ul>

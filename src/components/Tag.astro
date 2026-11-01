@@ -1,0 +1,16 @@
+---
+import { tagSlug } from '../lib/posts'
+
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<a
+  href={`/tags/${tagSlug(text)}/`}
+  class="mr-3 text-sm font-medium text-primary-500 uppercase hover:text-primary-600 dark:hover:text-primary-400"
+>
+  {text.split(' ').join('-')}
+</a>

@@ -11,7 +11,7 @@ const posts = defineCollection({
     // Transform string to Date object
     date: z.coerce.date(),
     description: z.string().optional(),
-    tags: z.array(z.string()).default([]),
+    tags: z.array(z.string().min(1)).default([]),
     draft: z.boolean().default(false),
   }),
 })

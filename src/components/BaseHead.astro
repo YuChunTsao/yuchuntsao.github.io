@@ -32,7 +32,7 @@ const { title, description, image = FallbackImage } = Astro.props
 />
 <meta name="generator" content={Astro.generator} />
 
-<Font cssVariable="--font-atkinson" preload />
+<Font cssVariable="--font-inter" preload />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -47,6 +47,16 @@ const { title, description, image = FallbackImage } = Astro.props
 <meta property="og:title" content={title} />
 {description && <meta property="og:description" content={description} />}
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
+
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171717" />
+
+<!-- Apply the saved theme before first paint, so dark mode doesn't flash white. -->
+<script is:inline>
+  const theme = localStorage.getItem('theme')
+  const dark = theme ? theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches
+  document.documentElement.classList.toggle('dark', dark)
+</script>
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
