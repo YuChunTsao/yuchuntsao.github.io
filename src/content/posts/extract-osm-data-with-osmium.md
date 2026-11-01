@@ -3,7 +3,6 @@ title: Extract OSM data with Osmium
 date: '2023-01-15'
 tags: ['Osmium', 'OpenStreetMap']
 draft: false
-summary:
 ---
 
 The previous article ([import-osm-data-into-postgis-with-osm2pgsql](https://yuchuntsao.github.io/blog/2023/import-osm-data-into-postgis-with-osm2pgsql)) introduces how to import OSM data into PostGIS through osm2pgsql. In this article, I will extract OSM with Osmium and import customized `osm.pbf` into PostGIS.

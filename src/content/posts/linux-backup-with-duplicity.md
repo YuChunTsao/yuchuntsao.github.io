@@ -3,7 +3,6 @@ title: Linux backup with Duplicity
 date: '2023-01-22'
 tags: ['Linux', 'Backup', 'Duplicity']
 draft: false
-summary:
 ---
 
 ## Environment

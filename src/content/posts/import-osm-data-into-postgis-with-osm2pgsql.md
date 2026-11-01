@@ -3,7 +3,6 @@ title: Import OSM data into PostGIS with osm2pgsql
 date: '2023-01-08'
 tags: ['osm2pgsql', 'OpenStreetMap', 'PostGIS']
 draft: false
-summary:
 ---
 
 ## Prerequisites

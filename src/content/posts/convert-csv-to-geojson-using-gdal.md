@@ -3,7 +3,6 @@ title: Convert CSV to GeoJSON using GDAL
 date: '2022-12-18'
 tags: ['GDAL', 'CSV', 'GeoJSON']
 draft: false
-summary:
 ---
 
 If you have a csv file with columns for coordinates, you can convert the csv to geojson using GDAL.

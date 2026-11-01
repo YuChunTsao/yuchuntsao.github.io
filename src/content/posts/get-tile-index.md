@@ -2,8 +2,7 @@
 title: Get tile index from a polygon?
 date: '2024-10-13'
 tags: ['']
-draft: false
-summary:
+draft: true
 ---
 
 利用 PMTiles 提供的 `zxy_to_tileid` 以及 `tileid_to_zxy` 方法，將 ZXY 的圖磚服務儲存為 PMTiles 格式。

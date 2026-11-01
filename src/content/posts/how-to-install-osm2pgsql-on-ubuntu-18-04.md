@@ -1,9 +1,8 @@
 ---
 title: How to install osm2pgsql on ubuntu 18.04?
-date: 2023-1-1'
+date: '2023-01-01'
 tags: ['osm2pgsql']
 draft: false
-summary:
 ---
 
 ## Environment

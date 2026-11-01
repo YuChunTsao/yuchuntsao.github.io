@@ -3,7 +3,6 @@ title: How to install and setup PostGIS on Ubuntu 22.04?
 date: '2023-01-29'
 tags: ['PostGIS']
 draft: false
-summary:
 ---
 
 ## Install PostgreSQL

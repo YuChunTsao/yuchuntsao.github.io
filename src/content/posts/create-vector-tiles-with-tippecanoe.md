@@ -3,7 +3,6 @@ title: Create vector tiles with tippecanoe
 date: '2023-02-12'
 tags: ['OpenStreetMap', 'Vector Tiles', 'Tippecanoe']
 draft: false
-summary:
 ---
 
 In this article, I use [felt/tippecanoe](https://github.com/felt/tippecanoe) to create vector tiles. Because this fork supports new features that you can use FlatGeobuf as input and PMTiles as output.

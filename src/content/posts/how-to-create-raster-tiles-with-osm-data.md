@@ -3,7 +3,6 @@ title: How to create raster tiles with OSM data
 date: '2023-02-26'
 tags: ['OpenStreetMap', 'Raster Tiles', 'Docker']
 draft: false
-summary:
 ---
 
 ## Demo

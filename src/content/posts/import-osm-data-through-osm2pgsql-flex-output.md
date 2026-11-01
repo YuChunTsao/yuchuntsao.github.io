@@ -3,7 +3,6 @@ title: Import OSM data through osm2pgsql flex output
 date: '2023-02-05'
 tags: ['osm2pgsql', 'OpenStreetMap', 'PostGIS']
 draft: false
-summary:
 ---
 
 ## Environment

@@ -3,7 +3,6 @@ title: How to setup PostGIS with docker?
 date: '2022-12-25'
 tags: ['postgis', 'docker']
 draft: false
-summary:
 ---
 
 ## Environment

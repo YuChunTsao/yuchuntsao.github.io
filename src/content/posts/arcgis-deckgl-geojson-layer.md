@@ -2,8 +2,7 @@
 title: A Comparison of ArcGIS GeoJSONLayer and Deck.gl GeoJsonLayer
 date: '2024-10-12'
 tags: ['ArcGIS API for JavaScript', 'deck.gl', 'GeoJSON']
-draft: false
-summary:
+draft: true
 ---
 
 ## OpenGL Anti-aliasing Issue
