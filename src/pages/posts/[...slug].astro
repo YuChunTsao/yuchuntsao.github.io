@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, render } from 'astro:content'
+import MaplibreGL from '../../components/MaplibreGL.astro'
 import BlogPost from '../../layouts/BlogPost.astro'
 import { getPosts } from '../../lib/posts'
 
@@ -17,5 +18,5 @@ const { Content } = await render(post)
 ---
 
 <BlogPost {...post.data}>
-  <Content />
+  <Content components={{ MaplibreGL }} />
 </BlogPost>

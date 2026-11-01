@@ -1,0 +1,74 @@
+---
+/** Same props as the old React component, so the posts need no changes. */
+interface Props {
+  style?: string
+  isPMTiles?: boolean
+  PMTILES_URL?: string
+}
+
+const {
+  style = 'https://demotiles.maplibre.org/style.json',
+  isPMTiles = false,
+  PMTILES_URL = '',
+} = Astro.props
+---
+
+<div data-maplibre data-style={style} data-pmtiles={isPMTiles ? PMTILES_URL : undefined}></div>
+
+<style>
+  [data-maplibre] {
+    width: 100%;
+    height: 35vh;
+    margin: 1.5em 0;
+  }
+</style>
+
+<script>
+  import { Map, type MapOptions, NavigationControl, addProtocol, setWorkerUrl } from 'maplibre-gl'
+  // maplibre looks for its worker next to its own module, which bundling breaks.
+  // `?worker&url` bundles the worker with its shared chunk; plain `?url` copies it alone
+  // and vector tiles never load in production.
+  import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
+  import 'maplibre-gl/dist/maplibre-gl.css'
+  import { PMTiles, Protocol } from 'pmtiles'
+
+  setWorkerUrl(workerUrl)
+
+  // One protocol per page, however many maps it has.
+  const protocol = new Protocol()
+  addProtocol('pmtiles', protocol.tile)
+
+  async function initMap(container: HTMLElement) {
+    const style = container.dataset.style!
+    const pmtilesUrl = container.dataset.pmtiles
+    let options: Partial<MapOptions> = {}
+
+    if (pmtilesUrl) {
+      const archive = new PMTiles(pmtilesUrl)
+      protocol.add(archive)
+      const h = await archive.getHeader()
+      options = {
+        minZoom: h.minZoom - 1,
+        maxZoom: h.maxZoom - 1,
+        zoom: h.centerZoom - 1,
+        // A single-tile archive has point bounds, which maplibre cannot constrain to.
+        ...(h.minLon < h.maxLon && h.minLat < h.maxLat
+          ? {
+              maxBounds: [
+                [h.minLon, h.minLat],
+                [h.maxLon, h.maxLat],
+              ] as [[number, number], [number, number]],
+            }
+          : {}),
+        center: [h.centerLon, h.centerLat],
+      }
+    }
+
+    const map = new Map({ container, style, ...options })
+    map.addControl(new NavigationControl())
+  }
+
+  for (const container of document.querySelectorAll<HTMLElement>('[data-maplibre]')) {
+    initMap(container).catch((error) => console.error('[MaplibreGL]', error))
+  }
+</script>

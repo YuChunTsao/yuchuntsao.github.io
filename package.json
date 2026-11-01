@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
     "format": "prettier --write ."
   },
   "dependencies": {
@@ -17,10 +18,14 @@
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.4.4",
+    "maplibre-gl": "^6.16.0",
+    "pmtiles": "^4.5.0",
     "sharp": "^0.35.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.12",
     "prettier": "^3.9.10",
-    "prettier-plugin-astro": "^1.1.2"
+    "prettier-plugin-astro": "^1.1.2",
+    "typescript": "^6.0.3"
   }
 }
