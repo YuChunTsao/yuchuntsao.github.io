@@ -1,8 +1,8 @@
 name: Create Static Site
 on:
   push:
-      branches:
-        - master
+    branches:
+      - master
 jobs:
   Build-Next-App:
     runs-on: ubuntu-latest
