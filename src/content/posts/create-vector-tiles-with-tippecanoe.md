@@ -28,7 +28,7 @@ make install
 
 You can use `GeoJSON`, `Geobuf`, `CSV` and `FlatGeobuf` (only felt/tippecanoe repository) as input format to create vector tiles.
 
-In the previous article ([Import OSM data through osm2pgsql flex output](https://yuchuntsao.github.io/blog/2023/import-osm-data-through-osm2pgsql-flex-output)) , I use osm2pgsql flex output to import OSM `highway` data into PostGIS. This article will use these data as input source to create vector tiles.
+In the previous article ([Import OSM data through osm2pgsql flex output](/posts/import-osm-data-through-osm2pgsql-flex-output/)) , I use osm2pgsql flex output to import OSM `highway` data into PostGIS. This article will use these data as input source to create vector tiles.
 
 ## Export FlatGeobuf from PostGIS through GDAL
 

@@ -6,17 +6,23 @@ import { getPosts } from '../../lib/posts'
 
 export async function getStaticPaths() {
   const posts = await getPosts()
-  return posts.map((post) => ({
+  // Newest first, so the previous (older) post is the next one in the list.
+  return posts.map((post, i) => ({
     params: { slug: post.id },
-    props: post,
+    props: { post, prev: posts[i + 1], next: posts[i - 1] },
   }))
 }
-type Props = CollectionEntry<'posts'>
 
-const post = Astro.props
+interface Props {
+  post: CollectionEntry<'posts'>
+  prev?: CollectionEntry<'posts'>
+  next?: CollectionEntry<'posts'>
+}
+
+const { post, prev, next } = Astro.props
 const { Content } = await render(post)
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} prev={prev} next={next}>
   <Content components={{ MaplibreGL }} />
 </BlogPost>

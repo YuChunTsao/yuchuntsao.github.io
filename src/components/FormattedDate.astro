@@ -1,13 +1,15 @@
 ---
 interface Props {
   date: Date
+  weekday?: boolean
 }
 
-const { date } = Astro.props
+const { date, weekday = false } = Astro.props
 ---
 
 <time datetime={date.toISOString()}>
   {date.toLocaleDateString('en-US', {
+    weekday: weekday ? 'long' : undefined,
     year: 'numeric',
     month: 'long',
     day: 'numeric',

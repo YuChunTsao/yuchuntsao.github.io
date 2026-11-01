@@ -1,0 +1,24 @@
+---
+import { SITE_TITLE } from '../consts'
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title={`Page Not Found - ${SITE_TITLE}`}>
+  <div class="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
+    <div class="space-x-2 pt-6 pb-8 md:space-y-5">
+      <h1 class="text-6xl leading-9 font-extrabold tracking-tight text-neutral-900 md:border-r-2 md:px-6 md:text-8xl md:leading-14 dark:text-neutral-100">
+        404
+      </h1>
+    </div>
+    <div class="max-w-md">
+      <p class="mb-4 text-xl leading-normal font-bold md:text-2xl">找不到這個頁面。</p>
+      <p class="mb-8">網址可能打錯了，或文章已經搬家。可以回首頁看看最新文章。</p>
+      <a
+        href="/"
+        class="inline-block rounded-lg bg-primary-500 px-4 py-2 text-sm leading-5 font-medium text-white shadow hover:bg-primary-600 dark:hover:bg-primary-400"
+      >
+        回到首頁
+      </a>
+    </div>
+  </div>
+</BaseLayout>

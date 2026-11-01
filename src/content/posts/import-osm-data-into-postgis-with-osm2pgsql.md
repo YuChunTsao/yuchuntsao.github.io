@@ -12,8 +12,8 @@ draft: false
 
 > Related articles:
 >
-> - [How to setup PostGIS with docker?](https://yuchuntsao.github.io/blog/2022/how-to-setup-postgis-with-docker)
-> - [How to install osm2pgsql on ubuntu 18.04?](https://yuchuntsao.github.io/blog/2023/how-to-install-osm2pgsql-on-ubuntu-18-04)
+> - [How to setup PostGIS with docker?](/posts/how-to-setup-postgis-with-docker/)
+> - [How to install osm2pgsql on ubuntu 18.04?](/posts/how-to-install-osm2pgsql-on-ubuntu-18-04/)
 
 ## Preparing the database
 
